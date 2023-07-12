@@ -1,0 +1,59 @@
+.banner {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 0.5fr;
+    align-items: center;
+}
+
+.logo {
+    grid-area: 1 / 1 / 2 / 4;
+    justify-self: center;
+}
+
+.contact-container {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.social {
+    height: 28px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+}
+
+.header-background {
+    background: linear-gradient(300deg,#a01010,#F70000,#d9312b,#d3463f);
+    background-size: 600% 100%;
+    /* animation-name: gradient-background-animation;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-duration: 10s; */
+    animation: 
+        gradient-background-animation 10s ease infinite,
+        slide-in-top 1.5s linear 1;
+}
+
+@keyframes gradient-background-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
