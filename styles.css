@@ -2,7 +2,7 @@ body {
     margin: 0px;
 }
 
-.banner {
+.banner-container {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr 0.5fr;
     padding: 10px 50px 0px 50px;
@@ -104,7 +104,6 @@ body {
     transform: scale(1.5);
 }
 
-
 .nav-item > a {
     text-decoration: none;
     font-family: 'Sawarabi Gothic', sans-serif;
@@ -113,3 +112,54 @@ body {
     letter-spacing: 0.1rem;
 }
 
+#name {
+    background: linear-gradient(rgba(255,255,255,.70), rgba(255,255,255,.70)), url("./assets/images/background.jpg");
+    padding: 10px 0px 10px 0px;
+}
+
+.name-background {
+    animation: slide-in-left linear 1.5s 1;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.name-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.name-style {
+    background-color: #d3463f;
+    border-radius: 10px;
+    box-shadow: 0 1rem 0 #a01010;
+}
+
+.name-style:hover {
+    animation: spin 2s linear infinite;
+    box-shadow: none;
+}
+
+@keyframes spin {
+    0%   {background-color:red; transform: rotate(0deg);}
+    25%  {background-color:yellow; transform: rotate(90deg);}
+    50%  {background-color:blue; transform: rotate(180deg);}
+    75%  {background-color:green; transform: rotate(270deg);}
+    100% {background-color:red; transform: rotate(360deg);}
+}
+
+h1 {
+    margin: 0%;
+    padding: 10px;
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+}
