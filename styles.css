@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    overflow-x: hidden;
 }
 
 .banner-container {
@@ -141,6 +142,7 @@ body {
     background-color: #d3463f;
     border-radius: 10px;
     box-shadow: 0 1rem 0 #a01010;
+    z-index: 1;
 }
 
 .name-style:hover {
@@ -157,9 +159,100 @@ body {
 }
 
 h1 {
+    position: relative;
     margin: 0%;
     padding: 10px;
     font-family: 'Anton', sans-serif;
     font-size: 2.5rem;
     color: white;
+    letter-spacing: 2px;
+}
+
+.carousel-background {
+    background: linear-gradient(300deg,#a01010,#F70000,#d9312b,#d3463f);
+    background-size: 600% 100%;
+    overflow: hidden;
+    animation: 
+        gradient-background-animation 10s ease infinite,
+        slide-in-right 1.5s linear 1;
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.carousel-background > h2 {
+    text-align: center;
+    margin: 0%;
+    padding: 10px 0px 10px 0px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+}
+
+.carousel-item > img {
+    height: 50px;
+}
+
+.carousel-container {
+    display : flex;
+    justify-content: space-evenly;
+    animation : slide 12s 1.5s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-item > p {
+    font-family: 'Sawarabi Gothic', sans-serif;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+.additional-container > p {
+    text-align: center;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    text-align: center;
+}
+
+.footer-content > p {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding: 20px 0px 20px 50px;
+    margin: 0px;
+}
+
+#footer {         
+    animation: slide-in-right 1.5s linear 1;
+}
+
+#additional-content {
+    animation: slide-in-left 1.5s linear 1;
 }
