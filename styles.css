@@ -116,6 +116,10 @@ body {
     letter-spacing: 0.1rem;
 }
 
+.nav-menu label, #menu {
+    display: none;
+}
+
 #name {
     background: linear-gradient(rgba(255,255,255,.70), rgba(255,255,255,.70)), url("./assets/images/background.jpg");
     padding: 10px 0px 10px 0px;
@@ -263,7 +267,7 @@ h1 {
     animation: slide-in-left 1.5s linear 1;
 }
 
-@media (max-width : 800px) {
+@media (max-width : 900px) {
     .banner-container {
         grid-auto-rows: 1fr;
         grid-auto-columns: 1fr;
@@ -278,8 +282,37 @@ h1 {
         justify-items: center;
     }
 
-    .nav-item {
-        flex: 0 1 30px;
+    .nav-menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        text-align: end;
+        right: 0px;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .nav-menu label {
+        display: block;
+        padding-right: 10px;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .nav-list {
+        display: none;
+        background-color: rgb(49, 49, 49);
+    }
+
+    .nav-menu input:checked ~ .nav-list {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        gap: 20px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 }
 
@@ -299,13 +332,4 @@ h1 {
             transform: translateX(-150%);
         }
     }
-
-    .nav-list {
-        gap: 3px;
-    }
-
-    .nav-item > a {
-        font-size: small;
-    }
-    
 }
