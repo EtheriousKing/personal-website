@@ -324,8 +324,18 @@ h1 {
     gap: 10px
 }
 
-#projects > a {
+#project-carousel {
+    display: inline-flex;
+}
+
+#project-carousel > a {
+    flex: 1;
+    display: inline-flex;
     text-decoration: none;
+}
+
+.card  img {
+    height: 100px;
 }
 
 #projects > h2 {
@@ -434,6 +444,12 @@ h1 {
         padding-bottom: 20px;
         padding-top: 20px;
     }
+
+    #project-carousel {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 
 @media (max-width: 500px) {
@@ -446,6 +462,11 @@ h1 {
         justify-content: space-between;
         animation : slide 18s 1.5s linear infinite;
         gap: 1rem;
+    }
+
+    #project-carousel {
+        display: flex;
+        flex-direction: column;
     }
     
     @keyframes slide {
